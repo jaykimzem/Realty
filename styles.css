@@ -273,6 +273,14 @@ p {
     color: white !important;
 }
 
+.bg-deep .action-box h2 {
+    color: var(--color-orange) !important;
+}
+
+.bg-deep .action-box p {
+    color: var(--color-black) !important;
+}
+
 .rounded {
     border-radius: 12px;
 }
