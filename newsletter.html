@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – Realty Development Group</title>
+    <title>Quarterly Newsletter – Realty Development Group</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -23,12 +23,12 @@
                 <li><a href="buy.html">Buy Property</a></li>
                 <li><a href="rent.html">Rentals</a></li>
                 <li class="dropdown">
-                    <a href="newsletter.html">Quarterly Newsletter &#9662;</a>
+                    <a href="newsletter.html" class="active">Quarterly Newsletter &#9662;</a>
                     <ul class="dropdown-menu">
                         <li><a href="networking.html">Power Networking</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <button class="mobile-toggle" id="mobile-toggle">
                 <span></span><span></span><span></span>
@@ -37,53 +37,44 @@
     </header>
 
     <main style="padding-top: 120px;">
-        <section class="contact-hero bg-brand-gold-soft py-lg">
-            <div class="container text-center">
-                <h1 class="text-cinzel text-gold">Connect via RDG Limited</h1>
-                <p class="large-text mx-auto text-black">Whether you are buying, selling, or seeking diaspora advice –
-                    we are ready to assist with clarity.</p>
+        <section class="newsletter-hero bg-brand-orange py-lg">
+            <div class="container text-center text-white">
+                <h1 class="text-cinzel">Quarterly Newsletter</h1>
+                <p class="large-text mx-auto">Market intelligence and project updates delivered directly to your inbox.
+                </p>
             </div>
         </section>
-        <section class="contact-section bg-brand-gold py-lg mt-lg">
-            <div class="container bg-white p-lg rounded shadow">
-                <div class="grid-2">
-                    <div class="contact-info text-black">
-                        <h2 class="text-cinzel text-orange">Let's Talk Results</h2>
-                        <p>Real estate should feel secure, intentional, and professionally guided. Start your journey
-                            with a partner who delivers with certainty.</p>
-                        <div class="info-block mt-md">
-                            <h4 class="text-montserrat text-gold">Email Us</h4>
-                            <p>info@realtydevgroup.com</p>
-                        </div>
-                        <div class="info-block mt-md">
-                            <h4 class="text-montserrat text-gold">Call Us</h4>
-                            <p>+254 748 276 779 | +254 716 575 954</p>
-                        </div>
+
+        <section class="newsletter-content py-lg mt-lg">
+            <div class="container">
+                <div class="grid-2 align-center">
+                    <div class="newsletter-info">
+                        <h2 class="text-cinzel text-orange">Why Subscribe?</h2>
+                        <ul class="list-styled mt-md">
+                            <li><strong>Early Access:</strong> Get first-hand info on new land subdivisions and
+                                developments.</li>
+                            <li><strong>Market Trends:</strong> Analysis of the Kenyan real estate market.</li>
+                            <li><strong>Clarity:</strong> Detailed reporting on our ongoing project milestones.</li>
+                            <li><strong>Exclusive Events:</strong> Invitations to our power networking sessions.</li>
+                        </ul>
                     </div>
-                    <div class="contact-form">
-                        <form class="rdg-form bg-light p-md rounded">
+                    <div class="newsletter-form-container bg-white p-lg shadow rounded">
+                        <h3 class="text-center mb-md">Join the RDG Circle</h3>
+                        <form class="rdg-form">
                             <div class="form-group">
-                                <label class="text-black">Full Name</label>
-                                <input type="text" placeholder="Your Name">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="email@example.com" required>
                             </div>
                             <div class="form-group">
-                                <label class="text-black">Email Address</label>
-                                <input type="email" placeholder="email@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label class="text-black">Subject</label>
+                                <label>Area of Interest</label>
                                 <select>
-                                    <option>Investment Inquiry</option>
-                                    <option>Selling Property</option>
-                                    <option>Buying (Land/Home)</option>
-                                    <option>Joint Venture</option>
+                                    <option>Land Acquisitions</option>
+                                    <option>Residential Investments</option>
+                                    <option>Commercial Developments</option>
+                                    <option>All of the above</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label class="text-black">Message</label>
-                                <textarea placeholder="How can we help?"></textarea>
-                            </div>
-                            <button type="button" class="btn btn-primary w-full">Send Message</button>
+                            <button type="submit" class="btn btn-primary w-full">Subscribe Now</button>
                         </form>
                     </div>
                 </div>

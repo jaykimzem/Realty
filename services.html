@@ -11,19 +11,28 @@
 <body>
     <header class="header">
         <nav class="container nav">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <img src="assets/Logo Realty Dev.png" alt="RDG Limited Logo" class="logo-img">
                 <span class="logo-text text-cinzel">RDG Limited</span>
-            </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="sell.html">Sell with Us</a></li>
+                <li><a href="land.html">Land For Sale</a></li>
+                <li><a href="sell.html">Sell With Us</a></li>
                 <li><a href="buy.html">Buy Property</a></li>
                 <li><a href="rent.html">Rentals</a></li>
-                <li><a href="track-record.html">Track Record</a></li>
+                <li class="dropdown">
+                    <a href="newsletter.html">Quarterly Newsletter &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="networking.html">Power Networking</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
@@ -94,6 +103,9 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col brand">
+                <a href="index.html" class="footer-logo mb-sm" style="display: block;">
+                    <img src="assets/Logo Realty Dev.png" alt="RDG Limited Logo" class="logo-img" style="height: 60px;">
+                </a>
                 <h3 class="text-cinzel">Realty Development Group</h3>
                 <p>Building value. Delivering certainty.</p>
             </div>
@@ -102,15 +114,17 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="track-record.html">Track Record</a></li>
+                    <li><a href="land.html">Land For Sale</a></li>
+                    <li><a href="newsletter.html">Quarterly Newsletter</a></li>
+                    <li style="padding-left: 15px; font-size: 0.9em;"><a href="networking.html">Power Networking</a>
+                    </li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4 class="text-montserrat">Solutions</h4>
+                <h4 class="text-montserrat">Engagement</h4>
                 <ul>
+                    <li><a href="sell.html">Sell With Us</a></li>
                     <li><a href="buy.html">Buy Property</a></li>
-                    <li><a href="sell.html">Sell with Us</a></li>
                     <li><a href="rent.html">Rentals</a></li>
                 </ul>
             </div>

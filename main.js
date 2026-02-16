@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Intro Animation Handling
+    const introOverlay = document.getElementById('intro-overlay');
+    if (introOverlay) {
+        // Animation duration is 4s, plus a small buffer
+        setTimeout(() => {
+            introOverlay.classList.add('fade-out');
+            setTimeout(() => {
+                introOverlay.style.display = 'none';
+            }, 500); // Match CSS fade-out transition
+        }, 4200);
+    }
+
     console.log('RDG Website Initialized');
 
     // Mobile Menu Toggle
