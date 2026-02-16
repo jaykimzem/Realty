@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy with RDG Limited – Guided Property Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-cream">
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">
+                <img src="assets/Logo Realty Dev.png" alt="RDG Limited Logo" class="logo-img">
+                <span class="logo-text text-cinzel">RDG Limited</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sell.html">Sell with Us</a></li>
+                <li><a href="buy.html" class="active">Buy Property</a></li>
+                <li><a href="rent.html">Rentals</a></li>
+                <li><a href="track-record.html">Track Record</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mt-lg pt-lg">
+        <section class="buy-journey">
+            <div class="container">
+                <div class="section-header text-center mb-lg">
+                    <h1 class="text-cinzel text-orange">Your Property Journey</h1>
+                    <p class="large-text mx-auto">Five steps to securing your future with clarity and certainty.</p>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container mb-lg">
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">1. Choose Type</div>
+                        <div class="step" data-step="2">2. Curated Grid</div>
+                        <div class="step" data-step="3">3. Book Visit</div>
+                        <div class="step" data-step="4">4. Reserve</div>
+                        <div class="step" data-step="5">5. Advisor</div>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progress-fill" style="width: 20%;"></div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Category Selector -->
+                <div class="journey-step active" id="step-1">
+                    <h2 class="text-center mb-md">What are you looking for?</h2>
+                    <div class="grid-4">
+                        <div class="guide-card shadow bg-white text-center selectable" onclick="nextStep(2, 'Land')">
+                            <img src="assets/Isinya Environs.png" class="img-responsive rounded mb-sm"
+                                style="height: 150px; width: 100%; object-fit: cover;">
+                            <h3 class="text-orange">Land</h3>
+                            <p>Strategic parcels in high-growth areas.</p>
+                        </div>
+                        <div class="guide-card shadow bg-white text-center selectable" onclick="nextStep(2, 'House')">
+                            <img src="assets/Family Home.png" class="img-responsive rounded mb-sm"
+                                style="height: 150px; width: 100%; object-fit: cover;">
+                            <h3 class="text-orange">Houses</h3>
+                            <p>Ready-to-move family homes.</p>
+                        </div>
+                        <div class="guide-card shadow bg-white text-center selectable"
+                            onclick="nextStep(2, 'Apartment')">
+                            <img src="assets/Apartments.png" class="img-responsive rounded mb-sm"
+                                style="height: 150px; width: 100%; object-fit: cover;">
+                            <h3 class="text-orange">Apartments</h3>
+                            <p>Modern urban living spaces.</p>
+                        </div>
+                        <div class="guide-card shadow bg-white text-center selectable"
+                            onclick="nextStep(2, 'Commercial')">
+                            <img src="assets/Commercial Building.png" class="img-responsive rounded mb-sm"
+                                style="height: 150px; width: 100%; object-fit: cover;">
+                            <h3 class="text-orange">Commercial</h3>
+                            <p>Retail, office, and business spaces.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Curated Listings -->
+                <div class="journey-step" id="step-2">
+                    <h2 class="text-center mb-md">Curated for your selection</h2>
+                    <div class="property-grid" id="curated-grid">
+                        <!-- Dynamically filtered properties -->
+                        <div class="property-card shadow bg-white">
+                            <div class="property-card-img"
+                                style="background-image: url('assets/Residential estate.png');"></div>
+                            <div class="property-card-content p-sm">
+                                <span class="property-card-tag">Strategic Growth</span>
+                                <h3 class="text-orange">Wakigwe Estate</h3>
+                                <p class="text-black">Kikuyu, Kamangu Road</p>
+                                <button class="btn btn-primary w-full mt-sm" onclick="nextStep(3)">Select & Book
+                                    Visit</button>
+                            </div>
+                        </div>
+                        <div class="property-card shadow bg-white">
+                            <div class="property-card-img"
+                                style="background-image: url('assets/Isinya Gardens Kajiado.jpeg');"></div>
+                            <div class="property-card-content p-sm">
+                                <span class="property-card-tag">Value Plot</span>
+                                <h3 class="text-orange">Isinya Gardens</h3>
+                                <p class="text-black">Kajiado County</p>
+                                <button class="btn btn-primary w-full mt-sm" onclick="nextStep(3)">Select & Book
+                                    Visit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-md">
+                        <button class="btn btn-outline" onclick="prevStep(1)">← Back to categories</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Book Site Visit -->
+                <div class="journey-step" id="step-3">
+                    <div class="grid-2 align-center">
+                        <div>
+                            <h2 class="text-cinzel text-orange">Step 3: Schedule Your Visit</h2>
+                            <p class="text-black">We believe in physical or virtual clarity. Choose a time that works
+                                for you.</p>
+                            <form class="rdg-form mt-md">
+                                <div class="form-group">
+                                    <label>Preferred Date</label>
+                                    <input type="date">
+                                </div>
+                                <div class="form-group">
+                                    <label>Preferred Time</label>
+                                    <select>
+                                        <option>Morning (9AM - 12PM)</option>
+                                        <option>Afternoon (2PM - 5PM)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mode of Visit</label>
+                                    <select>
+                                        <option>In-Person Site Visit</option>
+                                        <option>Virtual Tour (Zoom/WhatsApp)</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-primary w-full" onclick="nextStep(4)">Confirm Time
+                                    & Proceed</button>
+                            </form>
+                        </div>
+                        <div class="p-lg">
+                            <img src="assets/virtual-tour-asset.png" alt="Virtual Tour"
+                                class="img-responsive rounded shadow"
+                                onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Reserve Property -->
+                <div class="journey-step" id="step-4">
+                    <div class="max-600 mx-auto text-center">
+                        <h2 class="text-cinzel text-orange">Step 4: Reservation</h2>
+                        <p class="text-black mb-md">This is a non-payment based reservation. It flags your interest to
+                            our desk and holds the asset for 24 hours while we prepare documentation.</p>
+                        <form class="rdg-form text-left">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Any Specific Questions?</label>
+                                <textarea placeholder="Price Negotiation, Payment Plans, etc."></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary w-full" onclick="nextStep(5)">Submit
+                                Reservation Request</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Step 5: Final Advisor -->
+                <div class="journey-step" id="step-5">
+                    <div class="container text-center py-xl bg-white rounded shadow">
+                        <h1 class="text-cinzel text-green">Request Received.</h1>
+                        <p class="large-text mx-auto">A member of our advisory team will contact you within the next 2
+                            hours to finalize details and provide site maps.</p>
+                        <div class="mt-lg">
+                            <p><strong>Clarity Check:</strong> You will receive a summary of this request in your email.
+                            </p>
+                            <a href="index.html" class="btn btn-primary mt-sm">Return Home</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .journey-step {
+            display: none;
+        }
+
+        .journey-step.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .selectable {
+            cursor: pointer;
+            border-top: 4px solid transparent;
+        }
+
+        .selectable:hover {
+            border-top-color: var(--color-orange);
+        }
+
+        .max-600 {
+            max-width: 600px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .step {
+            font-family: var(--font-subheading);
+            font-weight: 600;
+            opacity: 0.4;
+        }
+
+        .step.active {
+            opacity: 1;
+            color: var(--color-orange);
+        }
+
+        .progress-bar-bg {
+            background: #ddd;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background: var(--color-orange);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        function nextStep(step, val) {
+            document.querySelectorAll('.journey-step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-' + step).classList.add('active');
+
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            document.querySelector('.step[data-step="' + step + '"]').classList.add('active');
+
+            document.getElementById('progress-fill').style.width = (step * 20) + '%';
+            window.scrollTo(0, 0);
+        }
+
+        function prevStep(step) {
+            nextStep(step);
+        }
+    </script>
+</body>
+
+</html>

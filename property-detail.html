@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Detail – RDG Limited</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-cream">
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">
+                <img src="assets/Logo Realty Dev.png" alt="RDG Limited Logo" class="logo-img">
+                <span class="logo-text text-cinzel">RDG Limited</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sell.html">Sell with Us</a></li>
+                <li><a href="buy.html">Buy Property</a></li>
+                <li><a href="rent.html">Rentals</a></li>
+                <li><a href="track-record.html">Track Record</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mt-lg pt-lg">
+        <section class="property-detail-section">
+            <div class="container">
+                <div class="grid-layout-detail">
+                    <div class="detail-main">
+                        <div class="property-hero-gallery shadow rounded overflow-hidden mb-md">
+                            <img src="assets/Residential estate.png" alt="Property Hero" class="img-responsive"
+                                style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+
+                        <div class="detail-content bg-white p-lg rounded shadow">
+                            <div class="flex-between align-center mb-sm">
+                                <h1 class="text-cinzel text-orange">Wakigwe Estate plots </h1>
+                                <span class="badge bg-green">For Sale</span>
+                            </div>
+                            <p class="text-grey mb-md">Kikuyu, Kamangu Along Ondiri-Kamangu Road</p>
+
+                            <h3 class="text-cinzel text-green mb-sm">The Opportunity</h3>
+                            <p class="text-black">Wakigwe estate is located along Ondiri-kamangu road. It is just 7km
+                                from Kikuyu Town, touched by the tarmac and near the Rose-gate center. This prime
+                                location offers both accessibility and a serene environment for residential development.
+                            </p>
+
+                            <div class="grid-3 mt-md">
+                                <div class="stat-box">
+                                    <span class="label">Size</span>
+                                    <span class="value">50x100 Plots</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="label">Distance</span>
+                                    <span class="value">7km from Kikuyu</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="label">Utility</span>
+                                    <span class="value">Ready Title</span>
+                                </div>
+                            </div>
+
+                            <div class="virtual-tour-embed mt-lg bg-light p-md rounded text-center">
+                                <h4 class="text-orange mb-sm">Virtual Tour Experience</h4>
+                                <video controls class="img-responsive rounded shadow"
+                                    style="width: 100%; max-height: 300px;">
+                                    <source src="assets/Virtual Tour Video Wakigwe Estate.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-sidebar">
+                        <div class="booking-sticky-card shadow bg-white p-lg rounded border-top-orange">
+                            <h3 class="text-cinzel text-center mb-md">Secure this Asset</h3>
+                            <p class="text-center font-bold text-orange mb-md">Starting from KES 2,500,000</p>
+
+                            <form class="rdg-form-simple">
+                                <div class="form-group">
+                                    <label>Action</label>
+                                    <select id="action-type">
+                                        <option value="visit">Book Site Visit</option>
+                                        <option value="reserve">Reserve Property</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" placeholder="+254...">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-full mt-sm">Initialize Certainty</button>
+                            </form>
+
+                            <div class="advisor-contact mt-md pt-md border-top">
+                                <p class="text-center text-grey" style="font-size: 0.85rem;">Or speak directly to an
+                                    advisor:</p>
+                                <div class="flex-between mt-sm">
+                                    <a href="tel:+254712345678" class="btn-text">Call Now</a>
+                                    <a href="https://wa.me/254712345678" class="btn-text">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        .grid-layout-detail {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .border-top-orange {
+            border-top: 6px solid var(--color-orange);
+        }
+
+        .stat-box {
+            background: var(--bg-brand-orange-soft);
+            padding: var(--spacing-sm);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box .label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--color-grey-medium);
+            font-weight: 700;
+        }
+
+        .stat-box .value {
+            display: block;
+            font-weight: 700;
+            color: var(--color-orange);
+        }
+
+        .border-top {
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 992px) {
+            .grid-layout-detail {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-sidebar {
+                position: static;
+            }
+        }
+    </style>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>© Realty Development Group 2026. Clarity in detail.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
