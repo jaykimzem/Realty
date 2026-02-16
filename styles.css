@@ -1035,6 +1035,8 @@ section {
 
     .mobile-toggle {
         display: flex;
+        grid-column: 3;
+        justify-self: end;
         z-index: 2100;
     }
 
