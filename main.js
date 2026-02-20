@@ -83,4 +83,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     }
+
+    // --- AI CHATBOT LOADER (3-Layer Architecture) ---
+    function loadAIChat() {
+        // Replace with your actual Vercel deployment URL
+        const VERCEL_URL = 'https://agent-realty-ai.vercel.app';
+
+        // Inject CSS
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = `${VERCEL_URL}/static/chat-widget.css`;
+        document.head.appendChild(link);
+
+        // Inject JS Loader
+        const script = document.createElement('script');
+        script.src = `${VERCEL_URL}/static/chat-widget.js`;
+        script.onload = () => {
+            new AgentChat({
+                siteId: 'realty',
+                siteName: 'Realty Development Group'
+            });
+        };
+        document.body.appendChild(script);
+    }
+    loadAIChat();
 });
