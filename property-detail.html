@@ -38,60 +38,144 @@
 
     <main class="mt-lg pt-lg">
         <section class="property-detail-section">
-            <div class="container">
+            <div class="container" id="property-container">
+                <!-- Content will be injected by JS -->
+                <div class="text-center py-xl">
+                    <p>Loading property details...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const propertyData = {
+            'isinya-gardens': {
+                name: 'Isinya Gardens - Family Home',
+                location: 'Isinya, Kajiado County',
+                tag: 'Home for Sale',
+                description: 'One of a kind 3 Family Home with 4 bedrooms each. This unique property is designed for extended families or high-yield rental investment. The first and ground floors include Dedicated Servant Quarters (DSQ).',
+                price: 'Asking KES 15,000,000',
+                valuation: 'Valued at 18M',
+                stats: [
+                    { label: 'Bedrooms', value: '4 Per Unit' },
+                    { label: 'Units', value: '3 Family Units' },
+                    { label: 'Features', value: 'DSQ Included' }
+                ],
+                heroImage: 'assets/Home Sale Main Isinya.jpeg',
+                gallery: [
+                    'assets/Home Sale 1 Isinya.jpeg',
+                    'assets/Home Sale 2 Isinya.jpeg',
+                    'assets/Home Sale 3 Isinya.jpeg'
+                ]
+            },
+            'isinya-chuna': {
+                name: 'Isinya Chuna Estate',
+                location: 'Isinya, Kajiado',
+                tag: 'Special Offer',
+                description: 'A controlled gated community focusing on internal reflection and evocative living. Currently offering a special limited-time price for the first 100 plots.',
+                price: 'From KES 750,000',
+                stats: [
+                    { label: 'Zone C', value: '750,000/-' },
+                    { label: 'Zone B', value: '1,000,000/-' },
+                    { label: 'Reservation', value: '10% Required' }
+                ],
+                heroImage: 'assets/Isinya Chuna Estate.jpeg',
+                video: 'assets/Virtual Tour Video Wakigwe Estate in Kalimoni Juja @ 100K kes monthly.mp4'
+            },
+            'wasali-homes': {
+                name: 'Wasali Homes in Ruiru',
+                location: 'Ruiru, Kenya',
+                tag: 'Limited Availability',
+                description: 'Prime residential plots in the fast-growing Ruiru area. Only 30 plots remaining in this strategic growth zone. First come first to buy.',
+                price: 'KES 10,000,000 - 15,000,000',
+                stats: [
+                    { label: 'Remaining', value: '30 Plots' },
+                    { label: 'Area', value: 'Ruiru' },
+                    { label: 'Status', value: 'Ready to Build' }
+                ],
+                heroImage: 'assets/Isinya Environs.png'
+            },
+            'wakigwe-estate': {
+                name: 'Wakigwe Estate Plots',
+                location: 'Kikuyu, Kamangu Along Ondiri-Kamangu Road',
+                tag: 'For Sale',
+                description: 'Wakigwe estate is located along Ondiri-kamangu road. It is just 7km from Kikuyu Town, touched by the tarmac and near the Rose-gate center.',
+                price: 'Starting KES 2,500,000',
+                stats: [
+                    { label: 'Size', value: '50x100 Plots' },
+                    { label: 'Distance', value: '7km from Kikuyu' },
+                    { label: 'Utility', value: 'Ready Title' }
+                ],
+                heroImage: 'assets/Residential estate.png',
+                video: 'assets/Virtual Tour Video Wakigwe Estate in Kalimoni Juja @ 100K kes monthly.mp4'
+            }
+        };
+
+        function renderProperty() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id') || 'wakigwe-estate';
+            const data = propertyData[id];
+
+            if (!data) {
+                document.getElementById('property-container').innerHTML = '<h2 class="text-center">Property Not Found</h2>';
+                return;
+            }
+
+            const container = document.getElementById('property-container');
+            container.innerHTML = `
                 <div class="grid-layout-detail">
                     <div class="detail-main">
                         <div class="property-hero-gallery shadow rounded overflow-hidden mb-md">
-                            <img src="assets/Residential estate.png" alt="Property Hero" class="img-responsive"
+                            <img src="${data.heroImage}" alt="${data.name}" class="img-responsive"
                                 style="width: 100%; height: 400px; object-fit: cover;">
                         </div>
 
+                        ${data.gallery ? `
+                        <div class="grid-3 mb-md">
+                            ${data.gallery.map(img => `
+                                <img src="${img}" class="img-responsive rounded shadow cursor-pointer" style="height: 120px; width: 100%; object-fit: cover;" onclick="updateHero('${img}')">
+                            `).join('')}
+                        </div>
+                        ` : ''}
+
                         <div class="detail-content bg-white p-lg rounded shadow">
                             <div class="flex-between align-center mb-sm">
-                                <h1 class="text-cinzel text-orange">Wakigwe Estate plots </h1>
-                                <span class="badge bg-green">For Sale</span>
+                                <h1 class="text-cinzel text-orange">${data.name}</h1>
+                                <span class="badge bg-green">${data.tag}</span>
                             </div>
-                            <p class="text-grey mb-md">Kikuyu, Kamangu Along Ondiri-Kamangu Road</p>
+                            <p class="text-grey mb-md">${data.location}</p>
 
                             <h3 class="text-cinzel text-green mb-sm">The Opportunity</h3>
-                            <p class="text-black">Wakigwe estate is located along Ondiri-kamangu road. It is just 7km
-                                from Kikuyu Town, touched by the tarmac and near the Rose-gate center. This prime
-                                location offers both accessibility and a serene environment for residential development.
-                            </p>
+                            <p class="text-black">${data.description}</p>
+                            ${data.valuation ? `<p class="text-orange font-bold mt-sm">${data.valuation}</p>` : ''}
 
                             <div class="grid-3 mt-md">
-                                <div class="stat-box">
-                                    <span class="label">Size</span>
-                                    <span class="value">50x100 Plots</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="label">Distance</span>
-                                    <span class="value">7km from Kikuyu</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="label">Utility</span>
-                                    <span class="value">Ready Title</span>
-                                </div>
+                                ${data.stats.map(stat => `
+                                    <div class="stat-box">
+                                        <span class="label">${stat.label}</span>
+                                        <span class="value">${stat.value}</span>
+                                    </div>
+                                `).join('')}
                             </div>
 
+                            ${data.video ? `
                             <div class="virtual-tour-embed mt-lg bg-light p-md rounded text-center">
                                 <h4 class="text-orange mb-sm">Virtual Tour Experience</h4>
                                 <video controls class="img-responsive rounded shadow"
                                     style="width: 100%; max-height: 300px;">
-                                    <source
-                                        src="assets/Virtual Tour Video Wakigwe Estate in Kalimoni Juja @ 100K kes monthly.mp4"
-                                        type="video/mp4">
+                                    <source src="${data.video}" type="video/mp4">
                                 </video>
                             </div>
+                            ` : ''}
                         </div>
                     </div>
 
                     <div class="detail-sidebar">
                         <div class="booking-sticky-card shadow bg-white p-lg rounded border-top-orange">
                             <h3 class="text-cinzel text-center mb-md">Secure this Asset</h3>
-                            <p class="text-center font-bold text-orange mb-md">Starting from KES 2,500,000</p>
+                            <p class="text-center font-bold text-orange mb-md">${data.price}</p>
 
-                            <form class="rdg-form-simple">
+                            <form class="rdg-form-simple" id="property-booking-form">
                                 <div class="form-group">
                                     <label>Action</label>
                                     <select id="action-type">
@@ -101,29 +185,48 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Full Name</label>
-                                    <input type="text" placeholder="Your Name">
+                                    <input type="text" placeholder="Your Name" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Phone Number</label>
-                                    <input type="tel" placeholder="+254...">
+                                    <input type="tel" placeholder="+254..." required>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-full mt-sm">Initialize Certainty</button>
                             </form>
 
                             <div class="advisor-contact mt-md pt-md border-top">
-                                <p class="text-center text-grey" style="font-size: 0.85rem;">Or speak directly to an
-                                    advisor:</p>
+                                <p class="text-center text-grey" style="font-size: 0.85rem;">Or speak directly to an advisor:</p>
                                 <div class="flex-between mt-sm">
-                                    <a href="tel:+254712345678" class="btn-text">Call Now</a>
-                                    <a href="https://wa.me/254712345678" class="btn-text">WhatsApp</a>
+                                    <a href="tel:+254716575954" class="btn-text">Call RDG Team</a>
+                                    <a href="https://wa.me/254716575954" class="btn-text">WhatsApp</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            `;
+
+            // Add form listener
+            const form = document.getElementById('property-booking-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const action = document.getElementById('action-type').value;
+                    if (action === 'reserve') {
+                        window.location.href = `reservation.html?id=${id}`;
+                    } else {
+                        alert('Thank you! Your visit request for ' + data.name + ' has been received. Our team will contact you shortly.');
+                    }
+                });
+            }
+        }
+
+        window.updateHero = function (src) {
+            document.querySelector('.property-hero-gallery img').src = src;
+        }
+
+        document.addEventListener('DOMContentLoaded', renderProperty);
+    </script>
 
     <style>
         .grid-layout-detail {
