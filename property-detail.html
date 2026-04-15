@@ -62,23 +62,23 @@
     <script>
         const propertyData = {
             'isinya-gardens': {
-                name: 'Isinya Gardens - Family Home',
+                name: 'ISINYA Garden Estate - Must see',
                 location: 'Isinya, Kajiado County',
-                tag: 'Home for Sale',
-                description: 'One of a kind 3 Family Home with 4 bedrooms each. This unique property is designed for extended families or high-yield rental investment. The first and ground floors include Dedicated Servant Quarters (DSQ).',
-                price: 'Asking KES 15,000,000',
-                valuation: 'Valued at 18M',
+                tag: 'Gated Community',
+                description: 'ISINYA Garden Estate offers a unique opportunity to own prime land in a gated community. Plots reserved - Available blank. From 1.2m to 6m. Great investment opportunity.',
+                price: 'KES 1,200,000 - 6,000,000',
                 stats: [
-                    { label: 'Bedrooms', value: '4 Per Unit' },
-                    { label: 'Units', value: '3 Family Units' },
-                    { label: 'Features', value: 'DSQ Included' }
+                    { label: '50x100', value: '1,200,000/-' },
+                    { label: '1/2 Acre', value: '3,000,000/- (4 Left)' },
+                    { label: '1 Acre', value: '6,000,000/-' }
                 ],
-                heroImage: 'assets/Home Sale Main Isinya.jpeg',
+                heroImage: 'assets/Isinya Gardens Kajiado.jpeg',
                 gallery: [
-                    'assets/Home Sale 1 Isinya.jpeg',
-                    'assets/Home Sale 2 Isinya.jpeg',
-                    'assets/Home Sale 3 Isinya.jpeg'
-                ]
+                    'assets/Isinya Garden map.jpeg',
+                    'assets/Isinya Chuna Estate.jpeg',
+                    'assets/Home Sale Main Isinya.jpeg'
+                ],
+                mapImage: 'assets/Isinya Garden map.jpeg'
             },
             'isinya-chuna': {
                 name: 'Isinya Chuna Estate',
@@ -92,39 +92,79 @@
                     { label: 'Reservation', value: '10% Required' }
                 ],
                 heroImage: 'assets/Isinya Chuna Estate.jpeg',
+                gallery: [
+                    'assets/Isinya Environs.png'
+                ],
                 video: 'assets/Virtual Tour Video Wakigwe Estate in Kalimoni Juja @ 100K kes monthly.mp4'
             },
-            'wasali-homes': {
-                name: 'Wasali Homes in Ruiru',
+            'wasili-homes': {
+                name: 'Wasili Homes in Ruiru',
                 location: 'Ruiru, Kenya',
                 tag: 'Limited Availability',
-                description: 'Prime residential plots in the fast-growing Ruiru area. Only 30 plots remaining in this strategic growth zone. First come first to buy.',
+                description: 'Prime residential plots in the fastgrowing Ruiru area. Only 30 plots remaining in this strategic growth zone. First come first to buy.',
                 price: 'KES 10,000,000 - 15,000,000',
                 stats: [
                     { label: 'Remaining', value: '30 Plots' },
                     { label: 'Area', value: 'Ruiru' },
                     { label: 'Status', value: 'Ready to Build' }
                 ],
-                heroImage: 'assets/Isinya Environs.png'
+                heroImage: 'assets/Wasili homes.jpeg'
             },
-            'juja': {
-                name: 'Juja Kalimoni Wakigwe Estate',
-                location: 'Juja Kalimoni, Gated Community',
-                tag: 'Leasing Now',
-                description: 'Modern 3-bedroom residential units designed for long-term comfort and asset stability. Located in the heart of Juja Kalimoni, these units provide a serene gated community experience with modern finishes and secure parking. Only a few units remaining.',
-                price: 'Rent: KES 40,000 - 45,000 / mo',
+            'juja-kalimoni-rent': {
+                name: 'Juja Kalimoni - Two Bedroom Unit',
+                location: 'Near Thika Superhighway-Ndarugu motel area',
+                tag: 'For Rent',
+                description: 'Great area to live. Two bedroom unit for rent at Juja Kalimoni. Near Thika Superhighway and Ndarugu motel area. Call 0748276779 for booking a showing.',
+                price: 'Rent: KES 35,000 - 40,000 / mo',
                 stats: [
-                    { label: '3 Bedroom', value: '40,000/-' },
-                    { label: '3 Bed + DSQ', value: '45,000/-' },
-                    { label: 'Status', value: 'Leasing Now' }
+                    { label: 'Type', value: 'Two Bedroom' },
+                    { label: 'Location', value: 'Ndarugu area' },
+                    { label: 'Booking', value: '0748276779' }
+                ],
+                heroImage: 'assets/Thika.jpeg',
+                gallery: ['assets/Thika 2.jpg']
+            },
+            'kikuyu-wagige-sale': {
+                name: 'Kikuyu three bedroom town homes',
+                location: 'Wagige area Kikuyu',
+                tag: 'For Sale',
+                description: 'Own your own home. Great investment opportunity. These three bedroom town homes are located in the prime Wagige area of Kikuyu.',
+                price: 'Contact for Pricing',
+                stats: [
+                    { label: 'Type', value: '3 Bedroom Townhouse' },
+                    { label: 'Area', value: 'Wagige' },
+                    { label: 'Opportunity', value: 'Own your home' }
                 ],
                 heroImage: 'assets/Wakigwe Estate Juja 1.jpeg',
-                gallery: [
-                    'assets/Wakigwe Estate Juja 2.jpeg',
-                    'assets/Wakigwe Estate Juja 3.jpeg',
-                    'assets/Wakigwe Estate Juja 4.jpeg'
+                gallery: ['assets/Residential estate.png']
+            },
+            'realty-development-rent': {
+                name: 'Realty Development Rental units',
+                location: 'Near Thika Superhighway and JKUAT university',
+                tag: 'Leasing Now',
+                description: 'Two bedrooms from 35-40 k. Gated home with security near Thika Superhighway and near JKUAT university.',
+                price: 'Rent: KES 35,000 - 40,000 / mo',
+                stats: [
+                    { label: 'Type', value: 'Two Bedroom' },
+                    { label: 'Security', value: 'Gated Community' },
+                    { label: 'Proximity', value: 'Near JKUAT' }
                 ],
-                video: 'https://lh3.googleusercontent.com/u/0/d/1JbhrabuM_0DQvstQfkZXMglaJz7f-YOR=w1920-h1080-iv1'
+                heroImage: 'assets/Apartments.png',
+                gallery: ['assets/Modern Apartments.png']
+            },
+            'kinoo-bedseaters': {
+                name: 'New Bedseaters coming soon in KINOO',
+                location: 'Kinoo, Nairobi/Kiambu',
+                tag: 'Coming Soon',
+                description: 'Book your unit now. New bedseaters coming soon in the prime KINOO area. Perfect for young professionals and students.',
+                price: 'Booking Now',
+                stats: [
+                    { label: 'Type', value: 'Bedseater' },
+                    { label: 'Area', value: 'Kinoo' },
+                    { label: 'Status', value: 'Coming Soon' }
+                ],
+                heroImage: 'assets/Kinoo 1.jpg',
+                gallery: ['assets/Kinoo 2.jpeg']
             },
             'wakigwe-estate': {
                 name: 'Wakigwe Estate Plots - Kikuyu',
@@ -198,6 +238,42 @@
                                 </video>
                             </div>
                             ` : ''}
+
+                            ${data.mapImage ? `
+                            <div class="map-section mt-lg bg-light p-md rounded text-center">
+                                <h4 class="text-orange mb-sm">Property Map</h4>
+                                <img src="${data.mapImage}" alt="Property Map" class="img-responsive rounded shadow" style="width: 100%; max-height: 500px; object-fit: contain;">
+                            </div>
+                            ` : ''}
+
+                            <!-- Make an Offer Section -->
+                            <div id="offer-section" class="mt-xl p-lg rounded border-orange bg-white shadow-sm">
+                                <h3 class="text-cinzel text-orange mb-md">Make an Offer</h3>
+                                <p class="text-black mb-md">Do you have a specific price in mind? Submit your offer below and our team will review it.</p>
+                                <form id="make-offer-form" class="rdg-form-simple">
+                                    <div class="grid-2">
+                                        <div class="form-group">
+                                            <label>Your Price Offer (KES)</label>
+                                            <input type="number" id="offer-price" placeholder="e.g. 1,150,000" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" id="offer-name" placeholder="John Doe" required>
+                                        </div>
+                                    </div>
+                                    <div class="grid-2 mt-sm">
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input type="tel" id="offer-phone" placeholder="+254..." required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email Address</label>
+                                            <input type="email" id="offer-email" placeholder="email@example.com" required>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mt-md">Submit Offer</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
 
@@ -237,7 +313,7 @@
                 </div>
             `;
 
-            // Add form listener
+            // Add form listeners
             const form = document.getElementById('property-booking-form');
             if (form) {
                 form.addEventListener('submit', (e) => {
@@ -248,6 +324,16 @@
                     } else {
                         alert('Thank you! Your visit request for ' + data.name + ' has been received. Our team will contact you shortly.');
                     }
+                });
+            }
+
+            const offerForm = document.getElementById('make-offer-form');
+            if (offerForm) {
+                offerForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const offerPrice = document.getElementById('offer-price').value;
+                    alert('Offer submitted! You have placed an offer of KES ' + offerPrice + ' for ' + data.name + '. Our team will get back to you soon.');
+                    offerForm.reset();
                 });
             }
         }
@@ -268,6 +354,10 @@
 
         .border-top-orange {
             border-top: 6px solid var(--color-orange);
+        }
+
+        .border-orange {
+            border: 1px solid var(--color-orange);
         }
 
         .stat-box {
